@@ -1,0 +1,6 @@
+data
+scryfall/scryfall-api*
+__pycache__
+writeup
+.vscode
+model
