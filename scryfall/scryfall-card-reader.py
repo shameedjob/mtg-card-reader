@@ -7,7 +7,7 @@ import logging
 
 
 def process(fields: list[str], count: int = -1, output: str | None = None):
-    with open("data/raw/card-data.json", "r") as file:
+    with open(args.input, "r") as file:
         file.readline()
         index = 0
         imported_cards = set()
@@ -47,8 +47,9 @@ def process(fields: list[str], count: int = -1, output: str | None = None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Card selector")
-    parser.add_argument("-f", "--fields", nargs="+")
+    parser.add_argument("-f", "--fields", nargs="+", default=['name', 'oracle_text', 'color_identity', 'type_line', 'cmc'])
     parser.add_argument("-c", "--count", default=-1, type=int)
+    parser.add_argument("-i", "--input", type=str, default='data/raw/card-data.json')
     parser.add_argument("-o", "--output", default=None, type=str)
     args = parser.parse_args()
     process(args.fields, args.count, args.output)

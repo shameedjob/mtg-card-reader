@@ -99,15 +99,16 @@ python scryfall/scryfall-card-reader.py -f <field1> <field2> ... -o <output.tsv>
 
 | Flag | Long form | Description |
 |------|-----------|-------------|
-| `-f` | `--fields` | Scryfall JSON fields to extract (e.g. `name oracle_text type_line cmc color_identity`) |
+| `-i` | `--input` | Path to the bulk JSON file (default: `data/raw/card-data.json`) |
+| `-f` | `--fields` | Scryfall JSON fields to extract (default: `name oracle_text color_identity type_line cmc`) |
 | `-c` | `--count` | Max number of cards to export (default: all) |
 | `-o` | `--output` | Output TSV file path (prints to stdout if omitted) |
 
 The script deduplicates cards by `oracle_id`, extracts the requested fields, and writes a tab-separated file with a header row. Empty field values are replaced with `[NONE]`.
 
-Example (extracting the fields needed by the classifier):
+Example:
 ```bash
-python scryfall/scryfall-card-reader.py -f name oracle_text type_line cmc color_identity -o data/cards.tsv
+python scryfall/scryfall-card-reader.py -i data/raw/card-data.json -o data/cards.tsv
 ```
 
 ## Results
