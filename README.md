@@ -66,6 +66,7 @@ python test.py -n "Card Name" -c <cmc> -d "Oracle text" -t "Type line"
 Examples:
 ```bash
 python test.py -n "Lightning Bolt" -c 1 -d "Lightning Bolt deals 3 damage to any target." -t "Instant"
+# ['R']
 ```
 
 ```bash
