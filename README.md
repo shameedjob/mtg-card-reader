@@ -86,7 +86,7 @@ Both are fed into a `LogisticRegression` classifier. Multi-color cards are handl
 
 ## Data
 
-Card data sourced from [Scryfall](https://scryfall.com/docs/api) via the bulk-data endpoint (`[https://api.scryfall.com/bulk-data/](https://api.scryfall.com/bulk-data/e2ef41e3-5778-4bc2-af3f-78eca4dd9c23)`). Multi-color cards are assigned a single color for training via random sampling.
+Card data sourced from [Scryfall](https://scryfall.com/docs/api) via the bulk-data endpoint (`https://api.scryfall.com/bulk-data/e2ef41e3-5778-4bc2-af3f-78eca4dd9c23`). Multi-color cards are assigned a single color for training via random sampling.
 
 **Preparing data from Scryfall**
 
