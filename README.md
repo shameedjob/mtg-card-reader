@@ -83,7 +83,7 @@ The pipeline uses a `FeatureUnion` of two sub-pipelines:
 - **TF-IDF** — unigram/bigram TF-IDF over concatenated oracle text, type line, and card name (up to 10k features)
 - **Structured** — dict-vectorized card attributes, standard-scaled
 
-Both are fed into a `LogisticRegression` classifier. Multi-color cards are handled by thresholding per-class probabilities against a uniform prior (1/6).
+Both are fed into a `LogisticRegression` classifier. Multi-color cards are handled by thresholding per-class probabilities against a uniform prior (1/6 probability per class).
 
 ## Data
 
